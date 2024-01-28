@@ -118,7 +118,7 @@ class Mission
 					special="NONE";
 					id=10;
 					side="WEST";
-					vehicle="FR_Rodriguez";
+					vehicle="USMC_SoldierS_Engineer";
 					player="PLAY CDG";
 					rank="LIEUTENANT";
 					skill=0.60000002;
