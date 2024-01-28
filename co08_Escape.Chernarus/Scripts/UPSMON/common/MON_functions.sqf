@@ -1,6 +1,6 @@
 // =========================================================================================================
 //  Biblioteca de funciones comunes
-//  Version: 5.0.7
+//  Version: 5.1.0
 //  Author: Monsada (smirall@hotmail.com)
 //		http://www.simulacion-esp.com/
 //		Comunidad Hispana de Simulación
