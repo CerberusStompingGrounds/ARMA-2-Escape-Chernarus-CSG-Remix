@@ -1,10 +1,10 @@
 /*
  * Description: This file contains vheicle types and unit types for most units spawned in the mission.
- * "Random array" (used below) means that array will be used to spawn units, and that chance is 1/n that each element will be spawned on each spawn. The array can contain 
- * many elements of the same type, so the example array ["Offroad_DSHKM_INS", "Pickup_PK_INS", "Pickup_PK_INS"] will spawn an Offroad with 1/3 probability, and a 
+ * "Random array" (used below) means that array will be used to spawn units, and that chance is 1/n that each element will be spawned on each spawn. The array can contain
+ * many elements of the same type, so the example array ["Offroad_DSHKM_INS", "Pickup_PK_INS", "Pickup_PK_INS"] will spawn an Offroad with 1/3 probability, and a
  * Pickup with 2/3 probability.
  *
- * Except for the classes specified in this file, classes are specified in the following files: CreateSearchChopper.sqf, EscapeSurprises (RUSSIANSEARCHCHOPPER) 
+ * Except for the classes specified in this file, classes are specified in the following files: CreateSearchChopper.sqf, EscapeSurprises (RUSSIANSEARCHCHOPPER)
  * and RunExtraction.sqf, all in folder Scripts\Escape\.
  */
 
@@ -48,17 +48,17 @@ drn_arr_Escape_ReinforcementTruck_vehicleClasses = ["Ural_INS", "UralOpen_INS"];
 drn_arr_Escape_ReinforcementTruck_vehicleClassesMaxCargo = [14, 14];
 
 // Random array. Motorized search groups are sometimes sent to look for you. This array contains possible class definitions for the vehicles.
-drn_arr_Escape_MotorizedSearchGroup_vehicleClasses = ["BMP2_INS", "BMP3", "BTR90", "GAZ_Vodnik"];
+drn_arr_Escape_MotorizedSearchGroup_vehicleClasses = ["BMP2_INS", "BMP3", "BTR90", "GAZ_Vodnik", "BTR40_MG_TK_INS_EP1"];
 // Total cargo motorized search group vehicle. Each element corresponds to a vehicle (array element) in array drn_arr_Escape_MotorizedSearchGroup_vehicleClasses above.
 drn_arr_Escape_MotorizedSearchGroup_vehicleClassesMaxCargo = [7, 5, 7, 10];
 
-// A communication center is guarded by vehicles depending on variable _enemyFrequency. 1 = a random light armor. 2 = a random heavy armor. 3 = a random 
+// A communication center is guarded by vehicles depending on variable _enemyFrequency. 1 = a random light armor. 2 = a random heavy armor. 3 = a random
 // light *and* a random heavy armor.
 
 // Random array. Light armored vehicles guarding the communication centers.
-drn_arr_ComCenDefence_lightArmorClasses = ["BMP2_INS", "BRDM2_INS", "BMP3", "BTR90", "GAZ_Vodnik"];
+drn_arr_ComCenDefence_lightArmorClasses = ["BMP2_INS", "BRDM2_INS", "GAZ_Vodnik", "BRDM2_HQ_Gue"];
 // Random array. Heavy armored vehicles guarding the communication centers.
-drn_arr_ComCenDefence_heavyArmorClasses = ["T72_INS", "ZSU_INS", "2S6M_Tunguska", "T90"];
+drn_arr_ComCenDefence_heavyArmorClasses = ["T72_INS", "ZSU_INS", "2S6M_Tunguska", "T90", "BMP3", "BTR90"];
 
 // Random array. An ammo depot contains one static weapon of the followin types:
 drn_arr_Escape_AmmoDepot_StaticWeaponClasses = ["DSHkM_Mini_TriPod", "AGS_Ins", "DSHKM_Ins", "DSHKM_Ins"];

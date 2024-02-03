@@ -10,18 +10,18 @@ if (count _this > 3) then { _parkedVehicleClasses = _this select 3; } else { _pa
 _fnc_CreateObject = {
     private ["_className", "_relativePos", "_relativeDir", "_centerPos", "_rotateDir"];
     private ["_object", "_realPos", "_realDir"];
-    
+
     _className = _this select 0;
     _relativePos = _this select 1;
     _relativeDir = _this select 2;
     _centerPos = _this select 3;
     _rotateDir = _this select 4;
-    
+
     _realPos = ([_centerPos, [(_centerPos select 0) + (_relativePos select 0), (_centerPos select 1) + (_relativePos select 1)], _rotateDir] call drn_fnc_CL_RotatePosition);
     _realDir = _relativeDir + _rotateDir;
     _object = createVehicle [_className, _realPos, [], 0, "CAN_COLLIDE"];
     _object setDir _realDir;
-    
+
     _object
 };
 
@@ -240,13 +240,13 @@ if (count _staticWeaponClasses > 0) then {
     // Statics
     _pos = [-17, 13.5];
     _dir = 0;
-    
+
     _gun = _staticWeaponClasses select floor random count _staticWeaponClasses;
     [_gun, _pos, _dir, _centerPos, _rotateDir] call _fnc_CreateObject;
-    
+
     _pos = [17, -9.5];
     _dir = 135;
-    
+
     //_guns = ["DSHkM_Mini_TriPod", "AGS_Ins", "DSHKM_Ins"];
     _guns = ["DSHKM_Ins"];
     _gun = _guns select floor random count _guns;
@@ -257,13 +257,13 @@ if (count _parkedVehicleClasses > 0) then {
     // Cars
     _pos = [15.5, 12];
     _dir = 270;
-    
+
     _vehicle = _parkedVehicleClasses select floor random count _parkedVehicleClasses;
     [_vehicle, _pos, _dir, _centerPos, _rotateDir] call _fnc_CreateObject;
-    
+
     _pos = [15.5, 6.5];
     _dir = 270;
-    
+
     _vehicle = _parkedVehicleClasses select floor random count _parkedVehicleClasses;
     [_vehicle, _pos, _dir, _centerPos, _rotateDir] call _fnc_CreateObject;
 };
